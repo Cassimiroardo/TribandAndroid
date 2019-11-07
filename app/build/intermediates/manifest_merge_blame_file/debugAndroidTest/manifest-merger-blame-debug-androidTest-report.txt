@@ -3,31 +3,31 @@
 3    package="com.Integrador.triband.test" >
 4
 5    <uses-sdk
-5-->/home/cassimiro/Modelos/app/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger1609029964586426451.xml:5:5-74
+5-->/home/alunoinfo/Área de Trabalho/TribandAndroid/app/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger8968952535138122245.xml:5:5-74
 6        android:minSdkVersion="15"
-6-->/home/cassimiro/Modelos/app/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger1609029964586426451.xml:5:15-41
+6-->/home/alunoinfo/Área de Trabalho/TribandAndroid/app/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger8968952535138122245.xml:5:15-41
 7        android:targetSdkVersion="29" />
-7-->/home/cassimiro/Modelos/app/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger1609029964586426451.xml:5:42-71
+7-->/home/alunoinfo/Área de Trabalho/TribandAndroid/app/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger8968952535138122245.xml:5:42-71
 8
 9    <instrumentation
-9-->/home/cassimiro/Modelos/app/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger1609029964586426451.xml:11:5-15:72
+9-->/home/alunoinfo/Área de Trabalho/TribandAndroid/app/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger8968952535138122245.xml:11:5-15:72
 10        android:name="androidx.test.runner.AndroidJUnitRunner"
-10-->/home/cassimiro/Modelos/app/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger1609029964586426451.xml:11:22-76
+10-->/home/alunoinfo/Área de Trabalho/TribandAndroid/app/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger8968952535138122245.xml:11:22-76
 11        android:functionalTest="false"
-11-->/home/cassimiro/Modelos/app/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger1609029964586426451.xml:14:22-52
+11-->/home/alunoinfo/Área de Trabalho/TribandAndroid/app/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger8968952535138122245.xml:14:22-52
 12        android:handleProfiling="false"
-12-->/home/cassimiro/Modelos/app/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger1609029964586426451.xml:13:22-53
+12-->/home/alunoinfo/Área de Trabalho/TribandAndroid/app/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger8968952535138122245.xml:13:22-53
 13        android:label="Tests for com.Integrador.triband"
-13-->/home/cassimiro/Modelos/app/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger1609029964586426451.xml:15:22-70
+13-->/home/alunoinfo/Área de Trabalho/TribandAndroid/app/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger8968952535138122245.xml:15:22-70
 14        android:targetPackage="com.Integrador.triband" />
-14-->/home/cassimiro/Modelos/app/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger1609029964586426451.xml:12:22-68
+14-->/home/alunoinfo/Área de Trabalho/TribandAndroid/app/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger8968952535138122245.xml:12:22-68
 15
 16    <application android:debuggable="true" >
-16-->/home/cassimiro/Modelos/app/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger1609029964586426451.xml:7:5-9:19
-16-->/home/cassimiro/Modelos/app/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger1609029964586426451.xml:7:18-43
+16-->/home/alunoinfo/Área de Trabalho/TribandAndroid/app/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger8968952535138122245.xml:7:5-9:19
+16-->/home/alunoinfo/Área de Trabalho/TribandAndroid/app/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger8968952535138122245.xml:7:18-43
 17        <uses-library android:name="android.test.runner" />
-17-->/home/cassimiro/Modelos/app/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger1609029964586426451.xml:8:9-60
-17-->/home/cassimiro/Modelos/app/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger1609029964586426451.xml:8:23-57
+17-->/home/alunoinfo/Área de Trabalho/TribandAndroid/app/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger8968952535138122245.xml:8:9-60
+17-->/home/alunoinfo/Área de Trabalho/TribandAndroid/app/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger8968952535138122245.xml:8:23-57
 18    </application>
 19
 20</manifest>

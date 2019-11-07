@@ -1,4 +1,4 @@
-#Wed Oct 16 21:30:36 BRT 2019
-base.0=/home/cassimiro/Modelos/app/build/intermediates/dex/debug/mergeDexDebug/out/classes.dex
+#Thu Nov 07 09:58:51 BRST 2019
+base.0=/home/alunoinfo/Área de Trabalho/TribandAndroid/app/build/intermediates/dex/debug/mergeDexDebug/out/classes.dex
 path.0=classes.dex
 renamed.0=classes.dex

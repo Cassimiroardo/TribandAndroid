@@ -17,16 +17,31 @@
         android:layout_marginTop="50dp"
         android:layout_marginRight="30dp"
         android:layout_marginLeft="30dp"
-        android:drawableRight="@drawable/music"
 
         android:id="@+id/bemvindo"
 
+        android:textAlignment="center"
         android:text="BEM VINDO TRIBAND"
         android:textStyle="bold"
         android:textColor="@color/colorAccent"
         android:textSize="40dp"
         />
 
+
+
+    <ImageView
+        android:id="@+id/iv_logo"
+
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintTop_toBottomOf="@id/bemvindo"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/bt_banda"
+
+        android:src="@drawable/logo_triband"
+        />
 
     <Button
         android:layout_width="wrap_content"
@@ -38,6 +53,7 @@
 
         android:id="@+id/bt_banda"
 
+        android:layout_marginTop="60dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -58,6 +74,29 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/bt_banda"
+        android:layout_marginBottom="80dp"
+        />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="200dp"
+        android:layout_height="3dp"
+        android:background="@color/colorAccent"
+
+        app:layout_constraintTop_toBottomOf="@id/bemvindo"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        />
+
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="200dp"
+        android:layout_height="3dp"
+        android:background="@color/colorAccent"
+
+        app:layout_constraintBottom_toTopOf="@id/bemvindo"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

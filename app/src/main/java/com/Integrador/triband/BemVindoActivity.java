@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class BemVindoActivity extends AppCompatActivity {
@@ -17,6 +18,7 @@ public class BemVindoActivity extends AppCompatActivity {
     private Button btEstudio;
     private Animation cimaprabaixo;
     private Animation baixopracima;
+    private ImageView ivLogo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +28,7 @@ public class BemVindoActivity extends AppCompatActivity {
         this.btBanda = findViewById(R.id.bt_banda);
         this.btEstudio = findViewById(R.id.bt_estudio);
         this.bemvindo = findViewById(R.id.bemvindo);
+        this.ivLogo = findViewById(R.id.iv_logo);
 
         btEstudio.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -50,6 +53,5 @@ public class BemVindoActivity extends AppCompatActivity {
         this.bemvindo.setAnimation(cimaprabaixo);
         this.btBanda.setAnimation(baixopracima);
         this.btEstudio.setAnimation(baixopracima);
-
     }
 }

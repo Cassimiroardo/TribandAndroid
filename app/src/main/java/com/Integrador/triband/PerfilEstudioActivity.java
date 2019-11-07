@@ -20,7 +20,6 @@ import android.widget.PopupMenu;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
-import com.google.android.material.navigation.NavigationView;
 
 public class PerfilEstudioActivity extends AppCompatActivity implements PopupMenu.OnMenuItemClickListener {
 

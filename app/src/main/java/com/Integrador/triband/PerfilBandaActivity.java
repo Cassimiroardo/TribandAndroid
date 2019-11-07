@@ -56,4 +56,14 @@ public class PerfilBandaActivity extends AppCompatActivity implements PopupMenu.
         }
     }
 
+    public void telaDePesquisa(View v){
+        v.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(),PesquisarActivity.class);
+                startActivity(intent);
+            }
+        });
+    }
+
 }
