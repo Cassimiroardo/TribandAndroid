@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background"
-    tools:context=".PerfilBandaActivity"
+    tools:context=".Interfaces.PerfilBandaActivity"
 
     >
 
@@ -47,7 +47,7 @@
                     android:textAllCaps="true"
                     />
 
-                <ImageView
+                <de.hdodenhof.circleimageview.CircleImageView
                     android:id="@+id/iv_foto_usuario_banda"
                     android:layout_marginTop="20dp"
                     android:layout_width="100dp"

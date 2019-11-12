@@ -1026,6 +1026,7 @@ layout activity_login_estudio
 layout activity_perfil
 layout activity_perfil_banda
 layout activity_perfil_estudio
+layout activity_pesquisar
 layout notification_action
 layout notification_action_tombstone
 layout notification_template_custom_big

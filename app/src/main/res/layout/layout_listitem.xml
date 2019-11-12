@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/constraint"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bt_pesquisar"
+    android:padding="10dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    >
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iv_image"
+
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/ex_usu"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/tv_nome"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:textColor="@color/colorAccent"
+        android:text="NOME ESTUDIO"
+        android:textSize="30dp"
+        android:textStyle="bold"
+
+        android:layout_marginBottom="40dp"
+        android:layout_marginLeft="30dp"
+
+        app:layout_constraintLeft_toRightOf="@id/iv_image"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/tv_preco"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:textColor="@color/colorAccent"
+        android:text="R$ PREÇO"
+        android:textAllCaps="true"
+        android:textSize="15dp"
+        android:textStyle="normal"
+
+        android:layout_marginLeft="30dp"
+
+        app:layout_constraintLeft_toRightOf="@id/iv_image"
+        app:layout_constraintTop_toBottomOf="@id/tv_nome"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/tv_localizacao"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:textColor="@color/colorAccent"
+        android:text="RS - Cidade"
+        android:textSize="15dp"
+        android:textAllCaps="true"
+        android:textStyle="normal"
+
+        android:layout_marginLeft="30dp"
+
+        app:layout_constraintLeft_toRightOf="@id/tv_preco"
+        app:layout_constraintTop_toBottomOf="@id/tv_nome"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

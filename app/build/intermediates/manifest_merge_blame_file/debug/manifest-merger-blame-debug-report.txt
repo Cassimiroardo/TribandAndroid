@@ -6,135 +6,131 @@
 6
 7    <uses-sdk
 8        android:minSdkVersion="15"
-8-->/home/alunoinfo/Área de Trabalho/TribandAndroid/app/src/main/AndroidManifest.xml
+8-->/home/cassimiro/programação/INTEGRADOR/TribandAndroid/app/src/main/AndroidManifest.xml
 9        android:targetSdkVersion="29" />
-9-->/home/alunoinfo/Área de Trabalho/TribandAndroid/app/src/main/AndroidManifest.xml
+9-->/home/cassimiro/programação/INTEGRADOR/TribandAndroid/app/src/main/AndroidManifest.xml
 10
 11    <uses-permission android:name="android.permission.INTERNET" />
-11-->/home/alunoinfo/Área de Trabalho/TribandAndroid/app/src/main/AndroidManifest.xml:48:5-67
-11-->/home/alunoinfo/Área de Trabalho/TribandAndroid/app/src/main/AndroidManifest.xml:48:22-64
+11-->/home/cassimiro/programação/INTEGRADOR/TribandAndroid/app/src/main/AndroidManifest.xml:5:5-67
+11-->/home/cassimiro/programação/INTEGRADOR/TribandAndroid/app/src/main/AndroidManifest.xml:5:22-64
 12    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-12-->/home/alunoinfo/Área de Trabalho/TribandAndroid/app/src/main/AndroidManifest.xml:50:5-79
-12-->/home/alunoinfo/Área de Trabalho/TribandAndroid/app/src/main/AndroidManifest.xml:50:22-76
+12-->/home/cassimiro/programação/INTEGRADOR/TribandAndroid/app/src/main/AndroidManifest.xml:6:5-79
+12-->/home/cassimiro/programação/INTEGRADOR/TribandAndroid/app/src/main/AndroidManifest.xml:6:22-76
 13
 14    <!-- Include required permissions for Google Maps API to run. -->
 15    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-15-->[com.google.android.gms:play-services-maps:17.0.0] /home/alunoinfo/.gradle/caches/transforms-2/files-2.1/71410d59386dba98cbe61d29bc62f196/play-services-maps-17.0.0/AndroidManifest.xml:23:5-79
-15-->[com.google.android.gms:play-services-maps:17.0.0] /home/alunoinfo/.gradle/caches/transforms-2/files-2.1/71410d59386dba98cbe61d29bc62f196/play-services-maps-17.0.0/AndroidManifest.xml:23:22-76
+15-->[com.google.android.gms:play-services-maps:17.0.0] /home/cassimiro/.gradle/caches/transforms-2/files-2.1/1b9026f860ab6935418a182675a0a44a/play-services-maps-17.0.0/AndroidManifest.xml:23:5-79
+15-->[com.google.android.gms:play-services-maps:17.0.0] /home/cassimiro/.gradle/caches/transforms-2/files-2.1/1b9026f860ab6935418a182675a0a44a/play-services-maps-17.0.0/AndroidManifest.xml:23:22-76
 16
 17    <uses-feature
-17-->[com.google.android.gms:play-services-maps:17.0.0] /home/alunoinfo/.gradle/caches/transforms-2/files-2.1/71410d59386dba98cbe61d29bc62f196/play-services-maps-17.0.0/AndroidManifest.xml:26:5-28:35
+17-->[com.google.android.gms:play-services-maps:17.0.0] /home/cassimiro/.gradle/caches/transforms-2/files-2.1/1b9026f860ab6935418a182675a0a44a/play-services-maps-17.0.0/AndroidManifest.xml:26:5-28:35
 18        android:glEsVersion="0x00020000"
-18-->[com.google.android.gms:play-services-maps:17.0.0] /home/alunoinfo/.gradle/caches/transforms-2/files-2.1/71410d59386dba98cbe61d29bc62f196/play-services-maps-17.0.0/AndroidManifest.xml:27:9-41
+18-->[com.google.android.gms:play-services-maps:17.0.0] /home/cassimiro/.gradle/caches/transforms-2/files-2.1/1b9026f860ab6935418a182675a0a44a/play-services-maps-17.0.0/AndroidManifest.xml:27:9-41
 19        android:required="true" />
-19-->[com.google.android.gms:play-services-maps:17.0.0] /home/alunoinfo/.gradle/caches/transforms-2/files-2.1/71410d59386dba98cbe61d29bc62f196/play-services-maps-17.0.0/AndroidManifest.xml:28:9-32
-20    <!--
-21         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
-22         Google Maps Android API v2, but you must specify either coarse or fine
-23         location permissions for the 'MyLocation' functionality.
-24    -->
-25    <application
-25-->/home/alunoinfo/Área de Trabalho/TribandAndroid/app/src/main/AndroidManifest.xml:9:5-47:19
-26        android:allowBackup="true"
-26-->/home/alunoinfo/Área de Trabalho/TribandAndroid/app/src/main/AndroidManifest.xml:10:9-35
-27        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-27-->[androidx.core:core:1.0.1] /home/alunoinfo/.gradle/caches/transforms-2/files-2.1/72b2b92ec4ab73ff21fb9bc348de3b22/core-1.0.1/AndroidManifest.xml:22:18-86
-28        android:debuggable="true"
-29        android:icon="@mipmap/ic_launcher"
-29-->/home/alunoinfo/Área de Trabalho/TribandAndroid/app/src/main/AndroidManifest.xml:11:9-43
-30        android:label="@string/app_name"
-30-->/home/alunoinfo/Área de Trabalho/TribandAndroid/app/src/main/AndroidManifest.xml:12:9-41
-31        android:roundIcon="@mipmap/ic_launcher_round"
-31-->/home/alunoinfo/Área de Trabalho/TribandAndroid/app/src/main/AndroidManifest.xml:13:9-54
-32        android:supportsRtl="true"
-32-->/home/alunoinfo/Área de Trabalho/TribandAndroid/app/src/main/AndroidManifest.xml:14:9-35
-33        android:theme="@style/AppTheme" >
-33-->/home/alunoinfo/Área de Trabalho/TribandAndroid/app/src/main/AndroidManifest.xml:15:9-40
-34        <activity android:name="com.Integrador.triband.PesquisarActivity" />
-34-->/home/alunoinfo/Área de Trabalho/TribandAndroid/app/src/main/AndroidManifest.xml:16:9-64
-34-->/home/alunoinfo/Área de Trabalho/TribandAndroid/app/src/main/AndroidManifest.xml:16:19-52
-35        <activity android:name="com.Integrador.triband.CadastroEstudioActivity" />
-35-->/home/alunoinfo/Área de Trabalho/TribandAndroid/app/src/main/AndroidManifest.xml:17:9-61
-35-->/home/alunoinfo/Área de Trabalho/TribandAndroid/app/src/main/AndroidManifest.xml:17:19-58
-36        <activity android:name="com.Integrador.triband.CadastroBandaActivity" />
-36-->/home/alunoinfo/Área de Trabalho/TribandAndroid/app/src/main/AndroidManifest.xml:18:9-59
-36-->/home/alunoinfo/Área de Trabalho/TribandAndroid/app/src/main/AndroidManifest.xml:18:19-56
-37        <activity android:name="com.Integrador.triband.EditarBandaActivity" />
-37-->/home/alunoinfo/Área de Trabalho/TribandAndroid/app/src/main/AndroidManifest.xml:19:9-57
-37-->/home/alunoinfo/Área de Trabalho/TribandAndroid/app/src/main/AndroidManifest.xml:19:19-54
-38        <activity android:name="com.Integrador.triband.EditarEstudioActivity" />
-38-->/home/alunoinfo/Área de Trabalho/TribandAndroid/app/src/main/AndroidManifest.xml:20:9-59
-38-->/home/alunoinfo/Área de Trabalho/TribandAndroid/app/src/main/AndroidManifest.xml:20:19-56
-39        <activity android:name="com.Integrador.triband.PerfilBandaActivity" />
-39-->/home/alunoinfo/Área de Trabalho/TribandAndroid/app/src/main/AndroidManifest.xml:21:9-57
-39-->/home/alunoinfo/Área de Trabalho/TribandAndroid/app/src/main/AndroidManifest.xml:21:19-54
-40        <activity android:name="com.Integrador.triband.LoginBandaActivity" />
-40-->/home/alunoinfo/Área de Trabalho/TribandAndroid/app/src/main/AndroidManifest.xml:22:9-56
-40-->/home/alunoinfo/Área de Trabalho/TribandAndroid/app/src/main/AndroidManifest.xml:22:19-53
-41        <activity android:name="com.Integrador.triband.BemVindoActivity" >
-41-->/home/alunoinfo/Área de Trabalho/TribandAndroid/app/src/main/AndroidManifest.xml:23:9-29:20
-41-->/home/alunoinfo/Área de Trabalho/TribandAndroid/app/src/main/AndroidManifest.xml:23:19-51
-42            <intent-filter>
-42-->/home/alunoinfo/Área de Trabalho/TribandAndroid/app/src/main/AndroidManifest.xml:24:13-28:29
-43                <action android:name="android.intent.action.MAIN" />
-43-->/home/alunoinfo/Área de Trabalho/TribandAndroid/app/src/main/AndroidManifest.xml:25:17-69
-43-->/home/alunoinfo/Área de Trabalho/TribandAndroid/app/src/main/AndroidManifest.xml:25:25-66
-44
-45                <category android:name="android.intent.category.LAUNCHER" />
-45-->/home/alunoinfo/Área de Trabalho/TribandAndroid/app/src/main/AndroidManifest.xml:27:17-77
-45-->/home/alunoinfo/Área de Trabalho/TribandAndroid/app/src/main/AndroidManifest.xml:27:27-74
-46            </intent-filter>
-47        </activity>
-48        <!--
-49             The API key for Google Maps-based APIs is defined as a string resource.
-50             (See the file "res/values/google_maps_api.xml").
-51             Note that the API key is linked to the encryption key used to sign the APK.
-52             You need a different API key for each encryption key, including the release key that is used to
-53             sign the APK for publishing.
-54             You can define the keys for the debug and release targets in src/debug/ and src/release/.
-55        -->
-56        <activity
-56-->/home/alunoinfo/Área de Trabalho/TribandAndroid/app/src/main/AndroidManifest.xml:38:9-40:59
-57            android:name="com.Integrador.triband.MapsFragment"
-57-->/home/alunoinfo/Área de Trabalho/TribandAndroid/app/src/main/AndroidManifest.xml:39:13-41
-58            android:label="@string/title_activity_maps" />
-58-->/home/alunoinfo/Área de Trabalho/TribandAndroid/app/src/main/AndroidManifest.xml:40:13-56
-59        <activity android:name="com.Integrador.triband.PerfilEstudioActivity" />
-59-->/home/alunoinfo/Área de Trabalho/TribandAndroid/app/src/main/AndroidManifest.xml:42:9-59
-59-->/home/alunoinfo/Área de Trabalho/TribandAndroid/app/src/main/AndroidManifest.xml:42:19-56
-60        <activity android:name="com.Integrador.triband.LoginEstudioActivity" />
-60-->/home/alunoinfo/Área de Trabalho/TribandAndroid/app/src/main/AndroidManifest.xml:43:9-58
-60-->/home/alunoinfo/Área de Trabalho/TribandAndroid/app/src/main/AndroidManifest.xml:43:19-55
-61
-62        <meta-data
-62-->/home/alunoinfo/Área de Trabalho/TribandAndroid/app/src/main/AndroidManifest.xml:44:9-46:55
-63            android:name="com.google.android.geo.API_KEY"
-63-->/home/alunoinfo/Área de Trabalho/TribandAndroid/app/src/main/AndroidManifest.xml:45:13-58
-64            android:value="@string/google_maps_key" />
-64-->/home/alunoinfo/Área de Trabalho/TribandAndroid/app/src/main/AndroidManifest.xml:46:13-52
-65        <!-- Needs to be explicitly declared on P+ -->
-66        <uses-library
-66-->[com.google.android.gms:play-services-maps:17.0.0] /home/alunoinfo/.gradle/caches/transforms-2/files-2.1/71410d59386dba98cbe61d29bc62f196/play-services-maps-17.0.0/AndroidManifest.xml:33:9-35:40
-67            android:name="org.apache.http.legacy"
-67-->[com.google.android.gms:play-services-maps:17.0.0] /home/alunoinfo/.gradle/caches/transforms-2/files-2.1/71410d59386dba98cbe61d29bc62f196/play-services-maps-17.0.0/AndroidManifest.xml:34:13-50
-68            android:required="false" />
-68-->[com.google.android.gms:play-services-maps:17.0.0] /home/alunoinfo/.gradle/caches/transforms-2/files-2.1/71410d59386dba98cbe61d29bc62f196/play-services-maps-17.0.0/AndroidManifest.xml:35:13-37
-69
-70        <activity
-70-->[com.google.android.gms:play-services-base:17.0.0] /home/alunoinfo/.gradle/caches/transforms-2/files-2.1/291563c6708268cf4683b088770f2b39/play-services-base-17.0.0/AndroidManifest.xml:23:9-26:75
-71            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-71-->[com.google.android.gms:play-services-base:17.0.0] /home/alunoinfo/.gradle/caches/transforms-2/files-2.1/291563c6708268cf4683b088770f2b39/play-services-base-17.0.0/AndroidManifest.xml:24:13-79
-72            android:exported="false"
-72-->[com.google.android.gms:play-services-base:17.0.0] /home/alunoinfo/.gradle/caches/transforms-2/files-2.1/291563c6708268cf4683b088770f2b39/play-services-base-17.0.0/AndroidManifest.xml:25:13-37
-73            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-73-->[com.google.android.gms:play-services-base:17.0.0] /home/alunoinfo/.gradle/caches/transforms-2/files-2.1/291563c6708268cf4683b088770f2b39/play-services-base-17.0.0/AndroidManifest.xml:26:13-72
-74
-75        <meta-data
-75-->[com.google.android.gms:play-services-basement:17.0.0] /home/alunoinfo/.gradle/caches/transforms-2/files-2.1/a88b5873197536d75e99c15dee727583/jetified-play-services-basement-17.0.0/AndroidManifest.xml:23:9-25:69
-76            android:name="com.google.android.gms.version"
-76-->[com.google.android.gms:play-services-basement:17.0.0] /home/alunoinfo/.gradle/caches/transforms-2/files-2.1/a88b5873197536d75e99c15dee727583/jetified-play-services-basement-17.0.0/AndroidManifest.xml:24:13-58
-77            android:value="@integer/google_play_services_version" />
-77-->[com.google.android.gms:play-services-basement:17.0.0] /home/alunoinfo/.gradle/caches/transforms-2/files-2.1/a88b5873197536d75e99c15dee727583/jetified-play-services-basement-17.0.0/AndroidManifest.xml:25:13-66
-78    </application>
-79
-80</manifest>
+19-->[com.google.android.gms:play-services-maps:17.0.0] /home/cassimiro/.gradle/caches/transforms-2/files-2.1/1b9026f860ab6935418a182675a0a44a/play-services-maps-17.0.0/AndroidManifest.xml:28:9-32
+20
+21    <application
+21-->/home/cassimiro/programação/INTEGRADOR/TribandAndroid/app/src/main/AndroidManifest.xml:8:5-45:19
+22        android:allowBackup="true"
+22-->/home/cassimiro/programação/INTEGRADOR/TribandAndroid/app/src/main/AndroidManifest.xml:9:9-35
+23        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+23-->[androidx.core:core:1.0.1] /home/cassimiro/.gradle/caches/transforms-2/files-2.1/46da25c3e2ae6308b2227b660caa604d/core-1.0.1/AndroidManifest.xml:22:18-86
+24        android:debuggable="true"
+25        android:icon="@drawable/logo_triband"
+25-->/home/cassimiro/programação/INTEGRADOR/TribandAndroid/app/src/main/AndroidManifest.xml:10:9-46
+26        android:label="@string/app_name"
+26-->/home/cassimiro/programação/INTEGRADOR/TribandAndroid/app/src/main/AndroidManifest.xml:11:9-41
+27        android:roundIcon="@drawable/logo_triband"
+27-->/home/cassimiro/programação/INTEGRADOR/TribandAndroid/app/src/main/AndroidManifest.xml:12:9-51
+28        android:supportsRtl="true"
+28-->/home/cassimiro/programação/INTEGRADOR/TribandAndroid/app/src/main/AndroidManifest.xml:13:9-35
+29        android:theme="@style/AppTheme" >
+29-->/home/cassimiro/programação/INTEGRADOR/TribandAndroid/app/src/main/AndroidManifest.xml:14:9-40
+30        <activity android:name="com.Integrador.apresentação.Interfaces.PesquisarActivity" />
+30-->/home/cassimiro/programação/INTEGRADOR/TribandAndroid/app/src/main/AndroidManifest.xml:15:9-92
+30-->/home/cassimiro/programação/INTEGRADOR/TribandAndroid/app/src/main/AndroidManifest.xml:15:19-90
+31        <activity android:name="com.Integrador.apresentação.Interfaces.CadastroEstudioActivity" />
+31-->/home/cassimiro/programação/INTEGRADOR/TribandAndroid/app/src/main/AndroidManifest.xml:16:9-99
+31-->/home/cassimiro/programação/INTEGRADOR/TribandAndroid/app/src/main/AndroidManifest.xml:16:19-96
+32        <activity android:name="com.Integrador.apresentação.Interfaces.CadastroBandaActivity" />
+32-->/home/cassimiro/programação/INTEGRADOR/TribandAndroid/app/src/main/AndroidManifest.xml:17:9-97
+32-->/home/cassimiro/programação/INTEGRADOR/TribandAndroid/app/src/main/AndroidManifest.xml:17:19-94
+33        <activity android:name="com.Integrador.apresentação.Interfaces.EditarBandaActivity" />
+33-->/home/cassimiro/programação/INTEGRADOR/TribandAndroid/app/src/main/AndroidManifest.xml:18:9-95
+33-->/home/cassimiro/programação/INTEGRADOR/TribandAndroid/app/src/main/AndroidManifest.xml:18:19-92
+34        <activity android:name="com.Integrador.apresentação.Interfaces.EditarEstudioActivity" />
+34-->/home/cassimiro/programação/INTEGRADOR/TribandAndroid/app/src/main/AndroidManifest.xml:19:9-97
+34-->/home/cassimiro/programação/INTEGRADOR/TribandAndroid/app/src/main/AndroidManifest.xml:19:19-94
+35        <activity android:name="com.Integrador.apresentação.Interfaces.PerfilBandaActivity" />
+35-->/home/cassimiro/programação/INTEGRADOR/TribandAndroid/app/src/main/AndroidManifest.xml:20:9-95
+35-->/home/cassimiro/programação/INTEGRADOR/TribandAndroid/app/src/main/AndroidManifest.xml:20:19-92
+36        <activity android:name="com.Integrador.apresentação.Interfaces.LoginBandaActivity" />
+36-->/home/cassimiro/programação/INTEGRADOR/TribandAndroid/app/src/main/AndroidManifest.xml:21:9-94
+36-->/home/cassimiro/programação/INTEGRADOR/TribandAndroid/app/src/main/AndroidManifest.xml:21:19-91
+37        <activity android:name="com.Integrador.apresentação.Interfaces.BemVindoActivity" >
+37-->/home/cassimiro/programação/INTEGRADOR/TribandAndroid/app/src/main/AndroidManifest.xml:22:9-27:20
+37-->/home/cassimiro/programação/INTEGRADOR/TribandAndroid/app/src/main/AndroidManifest.xml:22:19-89
+38            <intent-filter>
+38-->/home/cassimiro/programação/INTEGRADOR/TribandAndroid/app/src/main/AndroidManifest.xml:23:13-26:29
+39                <action android:name="android.intent.action.MAIN" />
+39-->/home/cassimiro/programação/INTEGRADOR/TribandAndroid/app/src/main/AndroidManifest.xml:24:17-69
+39-->/home/cassimiro/programação/INTEGRADOR/TribandAndroid/app/src/main/AndroidManifest.xml:24:25-66
+40
+41                <category android:name="android.intent.category.LAUNCHER" />
+41-->/home/cassimiro/programação/INTEGRADOR/TribandAndroid/app/src/main/AndroidManifest.xml:25:17-77
+41-->/home/cassimiro/programação/INTEGRADOR/TribandAndroid/app/src/main/AndroidManifest.xml:25:27-74
+42            </intent-filter>
+43        </activity>
+44        <!--
+45             The API key for Google Maps-based APIs is defined as a string resource.
+46             (See the file "res/values/google_maps_api.xml").
+47             Note that the API key is linked to the encryption key used to sign the APK.
+48             You need a different API key for each encryption key, including the release key that is used to
+49             sign the APK for publishing.
+50             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+51        -->
+52        <activity
+52-->/home/cassimiro/programação/INTEGRADOR/TribandAndroid/app/src/main/AndroidManifest.xml:36:9-38:59
+53            android:name="com.Integrador.apresentação.Fragments.MapsFragment"
+53-->/home/cassimiro/programação/INTEGRADOR/TribandAndroid/app/src/main/AndroidManifest.xml:37:13-78
+54            android:label="@string/title_activity_maps" />
+54-->/home/cassimiro/programação/INTEGRADOR/TribandAndroid/app/src/main/AndroidManifest.xml:38:13-56
+55        <activity android:name="com.Integrador.apresentação.Interfaces.PerfilEstudioActivity" />
+55-->/home/cassimiro/programação/INTEGRADOR/TribandAndroid/app/src/main/AndroidManifest.xml:39:9-97
+55-->/home/cassimiro/programação/INTEGRADOR/TribandAndroid/app/src/main/AndroidManifest.xml:39:19-94
+56        <activity android:name="com.Integrador.apresentação.Interfaces.LoginEstudioActivity" />
+56-->/home/cassimiro/programação/INTEGRADOR/TribandAndroid/app/src/main/AndroidManifest.xml:40:9-96
+56-->/home/cassimiro/programação/INTEGRADOR/TribandAndroid/app/src/main/AndroidManifest.xml:40:19-93
+57
+58        <meta-data
+58-->/home/cassimiro/programação/INTEGRADOR/TribandAndroid/app/src/main/AndroidManifest.xml:42:9-44:55
+59            android:name="com.google.android.geo.API_KEY"
+59-->/home/cassimiro/programação/INTEGRADOR/TribandAndroid/app/src/main/AndroidManifest.xml:43:13-58
+60            android:value="@string/google_maps_key" />
+60-->/home/cassimiro/programação/INTEGRADOR/TribandAndroid/app/src/main/AndroidManifest.xml:44:13-52
+61        <!-- Needs to be explicitly declared on P+ -->
+62        <uses-library
+62-->[com.google.android.gms:play-services-maps:17.0.0] /home/cassimiro/.gradle/caches/transforms-2/files-2.1/1b9026f860ab6935418a182675a0a44a/play-services-maps-17.0.0/AndroidManifest.xml:33:9-35:40
+63            android:name="org.apache.http.legacy"
+63-->[com.google.android.gms:play-services-maps:17.0.0] /home/cassimiro/.gradle/caches/transforms-2/files-2.1/1b9026f860ab6935418a182675a0a44a/play-services-maps-17.0.0/AndroidManifest.xml:34:13-50
+64            android:required="false" />
+64-->[com.google.android.gms:play-services-maps:17.0.0] /home/cassimiro/.gradle/caches/transforms-2/files-2.1/1b9026f860ab6935418a182675a0a44a/play-services-maps-17.0.0/AndroidManifest.xml:35:13-37
+65
+66        <activity
+66-->[com.google.android.gms:play-services-base:17.0.0] /home/cassimiro/.gradle/caches/transforms-2/files-2.1/e91790921c910b5c0de2045e813ad59c/play-services-base-17.0.0/AndroidManifest.xml:23:9-26:75
+67            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+67-->[com.google.android.gms:play-services-base:17.0.0] /home/cassimiro/.gradle/caches/transforms-2/files-2.1/e91790921c910b5c0de2045e813ad59c/play-services-base-17.0.0/AndroidManifest.xml:24:13-79
+68            android:exported="false"
+68-->[com.google.android.gms:play-services-base:17.0.0] /home/cassimiro/.gradle/caches/transforms-2/files-2.1/e91790921c910b5c0de2045e813ad59c/play-services-base-17.0.0/AndroidManifest.xml:25:13-37
+69            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+69-->[com.google.android.gms:play-services-base:17.0.0] /home/cassimiro/.gradle/caches/transforms-2/files-2.1/e91790921c910b5c0de2045e813ad59c/play-services-base-17.0.0/AndroidManifest.xml:26:13-72
+70
+71        <meta-data
+71-->[com.google.android.gms:play-services-basement:17.0.0] /home/cassimiro/.gradle/caches/transforms-2/files-2.1/bff77712ea90d21d2fa995d46209c8b0/jetified-play-services-basement-17.0.0/AndroidManifest.xml:23:9-25:69
+72            android:name="com.google.android.gms.version"
+72-->[com.google.android.gms:play-services-basement:17.0.0] /home/cassimiro/.gradle/caches/transforms-2/files-2.1/bff77712ea90d21d2fa995d46209c8b0/jetified-play-services-basement-17.0.0/AndroidManifest.xml:24:13-58
+73            android:value="@integer/google_play_services_version" />
+73-->[com.google.android.gms:play-services-basement:17.0.0] /home/cassimiro/.gradle/caches/transforms-2/files-2.1/bff77712ea90d21d2fa995d46209c8b0/jetified-play-services-basement-17.0.0/AndroidManifest.xml:25:13-66
+74    </application>
+75
+76</manifest>
