@@ -4,13 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background">
+    android:background="@drawable/background"
+    tools:context="com.integrador.apresentação.Interfaces.LoginBandaActivity"
+    >
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        tools:context="br.com.fake.steam.LoginActivity"
         android:layout_gravity="center"
 
         app:layout_constraintTop_toTopOf="parent"
