@@ -13,17 +13,16 @@
         android:layout_width="300dp"
         android:layout_height="50dp"
 
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toLeftOf="@id/bt_send"
-
-        android:background="@drawable/edittext_bg"
         android:layout_margin="20dp"
-
+        android:background="@drawable/edittext_bg"
         android:hint="Pesquisar"
+
         android:textAlignment="center"
         android:textColorHint="@color/hintColor"
-        />
+
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/bt_send"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/bt_send"
@@ -31,60 +30,100 @@
         android:layout_width="50dp"
         android:layout_height="wrap_content"
 
-        android:background="@drawable/ic_menu_send"
-
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintLeft_toRightOf="@id/et_pesquisa"
-        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="20dp"
 
         android:layout_marginRight="20dp"
+        android:background="@drawable/ic_menu_send"
+        app:layout_constraintLeft_toRightOf="@id/et_pesquisa"
+
+
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/et_barato"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_margin="10dp"
+
+        android:text="Mais barato"
+
+        android:background="@drawable/edittext_bg"
+        android:padding="3dp"
+        android:textColor="@color/hintColor"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/cb_proximo"
+
+        android:inputType="number"
+
+        app:layout_constraintTop_toBottomOf="@id/et_pesquisa" />
+
+    <CheckBox
+        android:id="@+id/cb_proximo"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+
+        android:text="Mais proximo"
+        android:textColor="@color/hintColor"
+
+        app:layout_constraintLeft_toRightOf="@id/et_barato"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_pesquisa" />
+
+    <TextView
+        android:id="@+id/tv_inicio"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="HORA INICIO"
+        android:textColor="@color/hintColor"
+        android:background="@drawable/background2"
+
         android:layout_marginTop="20dp"
+        android:padding="10dp"
+
+        app:layout_constraintTop_toBottomOf="@id/et_barato"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/tv_fim"
+
+        android:onClick="timePickerInicio"
         />
 
-            <CheckBox
-                android:id="@+id/cb_proximo"
+    <TextView
+        android:id="@+id/tv_fim"
 
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Mais proximo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
 
-                android:layout_margin="10dp"
-                android:textColor="@color/hintColor"
+        android:text="HORA FIM"
+        android:textColor="@color/hintColor"
+        android:background="@drawable/background2"
 
-                app:layout_constraintTop_toBottomOf="@id/et_pesquisa"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintLeft_toRightOf="@id/cb_barato"
-                />
+        android:layout_marginTop="20dp"
+        android:padding="10dp"
 
-            <CheckBox
-                android:id="@+id/cb_barato"
+        app:layout_constraintTop_toBottomOf="@id/cb_proximo"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/tv_inicio"
 
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Mais barato"
+        android:onClick="timePickerFim"
+        />
 
-                android:layout_margin="10dp"
 
-                android:textColor="@color/hintColor"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview"
 
-                app:layout_constraintRight_toLeftOf="@id/cb_proximo"
-                app:layout_constraintTop_toBottomOf="@id/et_pesquisa"
-                app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
 
-                style="@style/checkbox"
-                />
+        android:layout_marginTop="20dp"
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recyclerview"
-
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-
-                android:layout_marginTop="20dp"
-
-                app:layout_constraintTop_toBottomOf="@id/cb_barato"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintLeft_toLeftOf="parent"
-                ></androidx.recyclerview.widget.RecyclerView>
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_inicio"></androidx.recyclerview.widget.RecyclerView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

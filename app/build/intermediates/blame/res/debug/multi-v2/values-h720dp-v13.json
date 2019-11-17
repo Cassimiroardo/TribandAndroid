@@ -4,7 +4,7 @@
             "outputFile": "/home/cassimiro/programação/projetos/TribandAndroid/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-h720dp-v13/values-h720dp-v13.xml",
             "map": [
                 {
-                    "source": "/home/cassimiro/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/3247df5ef5dbe1e9f3f168fb5fb6ce34/res/values-h720dp-v13/values-h720dp-v13.xml",
+                    "source": "/home/cassimiro/.gradle/caches/transforms-1/files-1.1/appcompat-1.0.0.aar/14f5cff0ee12d4814eb2eee471183324/res/values-h720dp-v13/values-h720dp-v13.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

@@ -26,7 +26,7 @@ public class PerfilBandaActivity extends AppCompatActivity implements PopupMenu.
     private TextView tvIntegrantes;
     private TextView tvEmail;
 
-    private Banda usuario;
+    private Banda banda;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,12 +37,11 @@ public class PerfilBandaActivity extends AppCompatActivity implements PopupMenu.
     }
 
     public void construindoPerfil(){
-
         Intent i = getIntent();
-        this.usuario = (Banda) i.getSerializableExtra("banda");
-        this.tvNomeBanda.setText(usuario.getNome());
-        this.tvEmail.setText(usuario.getEmail());
-        this.tvIntegrantes.setText(usuario.getIntegrantes()+" Integrantes");
+        this.banda = (Banda) i.getSerializableExtra("banda");
+        this.tvNomeBanda.setText(banda.getNome());
+        this.tvEmail.setText(banda.getEmail());
+        this.tvIntegrantes.setText(banda.getIntegrantes()+" Integrantes");
     }
 
     public void showPopUp(View v) {
@@ -68,6 +67,7 @@ public class PerfilBandaActivity extends AppCompatActivity implements PopupMenu.
         switch (item.getItemId()) {
             case R.id.editar:
                 Intent intent = new Intent(PerfilBandaActivity.this, EditarBandaActivity.class);
+                intent.putExtra("banda",this.banda);
                 startActivity(intent);
                 return true;
             case R.id.sair:

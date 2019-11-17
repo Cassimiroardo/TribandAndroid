@@ -19,10 +19,10 @@ public interface GenericService<P> {
     Call<List<P>> listar();
 
     @GET("id/{id}")
-    Call<P> buscarPorId();
+    Call<P> buscarPorId(@Path("id") Long id);
 
     @DELETE("id/{id}")
-    Call<Void> deletar(@Path("id") Integer id);
+    Call<Void> deletar(@Path("id") Long id);
 
     @PUT("")
     Call<P> atualizar(@Body P p);

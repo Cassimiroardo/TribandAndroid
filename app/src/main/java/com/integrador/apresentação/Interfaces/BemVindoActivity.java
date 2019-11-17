@@ -1,6 +1,7 @@
 package com.integrador.apresentação.Interfaces;
 
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
@@ -11,6 +12,8 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.GoogleApiAvailability;
 import com.integrador.apresetação.R;
 
 
@@ -56,5 +59,28 @@ public class BemVindoActivity extends AppCompatActivity {
         this.bemvindo.setAnimation(cimaprabaixo);
         this.btBanda.setAnimation(baixopracima);
         this.btEstudio.setAnimation(baixopracima);
+    }
+
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        int erroCode = GoogleApiAvailability.getInstance().isGooglePlayServicesAvailable(this);
+        switch (erroCode){
+            case ConnectionResult.SERVICE_MISSING:
+            case ConnectionResult.SERVICE_VERSION_UPDATE_REQUIRED:
+            case ConnectionResult.SERVICE_DISABLED:
+                GoogleApiAvailability.getInstance().getErrorDialog(this, erroCode, 0, new DialogInterface.OnCancelListener() {
+                    @Override
+                    public void onCancel(DialogInterface dialogInterface) {
+                        finish();
+                    }
+                }).show();
+                break;
+            case ConnectionResult.SUCCESS:
+        }
+
+
     }
 }

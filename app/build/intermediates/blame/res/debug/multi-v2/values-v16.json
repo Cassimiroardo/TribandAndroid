@@ -4,7 +4,7 @@
             "outputFile": "/home/cassimiro/programação/projetos/TribandAndroid/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v16/values-v16.xml",
             "map": [
                 {
-                    "source": "/home/cassimiro/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/7c4d9dcf6f1eb59ccf0b554f7a1703e8/res/values-v16/values-v16.xml",
+                    "source": "/home/cassimiro/.gradle/caches/transforms-1/files-1.1/core-1.0.0.aar/e1ab948148df7cb6eed92a24271c86ce/res/values-v16/values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "/home/cassimiro/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/3247df5ef5dbe1e9f3f168fb5fb6ce34/res/values-v16/values-v16.xml",
+                    "source": "/home/cassimiro/.gradle/caches/transforms-1/files-1.1/appcompat-1.0.0.aar/14f5cff0ee12d4814eb2eee471183324/res/values-v16/values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
