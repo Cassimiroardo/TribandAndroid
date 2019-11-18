@@ -8,13 +8,18 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import com.integrador.apresetação.R;
+import com.mobsandgeeks.saripaar.annotation.Password;
 
 public class EditarEstudioActivity extends AppCompatActivity {
 
 
     private EditText etNome;
     private EditText etEmail;
+
+    @Password
     private EditText etSenhaAtual;
+
+    @Password
     private EditText etNovaSenha;
     private EditText etConfSenha;
     private EditText etRua;

@@ -32,13 +32,11 @@ public class EditarBandaActivity extends AppCompatActivity implements Validator.
 
     private EditText etNome;
     private EditText etEmail;
+
+    @Password(message = "confirme sua senha para realizar a edição")
     private EditText etSenhaAtual;
 
-    @Nullable
-    @Password
     private EditText etNovaSenha;
-
-    @ConfirmPassword
     private EditText etConfSenha;
     private EditText etNumIntegrantes;
     private Button btAlterarFoto;
@@ -90,12 +88,17 @@ public class EditarBandaActivity extends AppCompatActivity implements Validator.
     public void onValidationSucceeded() {
         if (etSenhaAtual.getText().toString().equals(banda.getSenha())) {
 
+            if (!etEmail.getText().toString().equalsIgnoreCase(""))
+                banda.setEmail(etEmail.getText().toString());
 
-            banda.setEmail(etEmail.getText().toString());
-            banda.setNome(etNome.getText().toString());
-            banda.setSenha(etNovaSenha.getText().toString());
-            banda.setIntegrantes(Integer.parseInt(etNumIntegrantes.getText().toString()));
+            if (!etNome.getText().toString().equalsIgnoreCase(""))
+                banda.setNome(etNome.getText().toString());
 
+            if(!etNovaSenha.getText().toString().equalsIgnoreCase("") && !etNovaSenha.getText().toString().equals(banda.getSenha()) && etNovaSenha.getText().toString().equals(etConfSenha.getText().toString()))
+                banda.setSenha(etNovaSenha.getText().toString());
+
+            if(!etNumIntegrantes.getText().toString().equalsIgnoreCase(""))
+                banda.setIntegrantes(Integer.parseInt(etNumIntegrantes.getText().toString()));
 
             Call<Banda> call = bandaService.atualizar(banda);
 
@@ -103,14 +106,14 @@ public class EditarBandaActivity extends AppCompatActivity implements Validator.
                 @Override
                 public void onResponse(Call<Banda> call, Response<Banda> response) {
 
-                    if(response.isSuccessful()) {
+                    if (response.isSuccessful()) {
                         Intent intent = new Intent(EditarBandaActivity.this, PerfilBandaActivity.class);
                         banda = response.body();
                         intent.putExtra("banda", banda);
                         Toast.makeText(EditarBandaActivity.this, "Dados editados!!!", Toast.LENGTH_SHORT).show();
                         startActivity(intent);
-                        }
                     }
+                }
 
                 @Override
                 public void onFailure(Call<Banda> call, Throwable t) {
