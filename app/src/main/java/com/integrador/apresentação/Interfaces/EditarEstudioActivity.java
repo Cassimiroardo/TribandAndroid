@@ -156,6 +156,9 @@ public class EditarEstudioActivity extends AppCompatActivity implements Validato
                         public void onResponse(Call<Estudio> call, Response<Estudio> response) {
                             if(response.isSuccessful()){
                                 Toast.makeText(EditarEstudioActivity.this, "Dados editados!!!", Toast.LENGTH_SHORT).show();
+                                Intent intent = new Intent(EditarEstudioActivity.this,PerfilEstudioActivity.class);
+                                intent.putExtra("estudio",estudio);
+                                startActivity(intent);
                             }
                         }
 
