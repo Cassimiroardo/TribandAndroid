@@ -54,5 +54,5 @@ public interface EstudioService {
     Call<List<Estudio>> buscarPorHorarioDisponivel(@Path("inicio") Time inicio,@Path("fim") Time fim);
 
     @GET("estudio/filtro/{latitude}/{longitude}/{raio}/{preco}/{inicio}/{fim}/{ordenacao}")
-    Call<List<Estudio>> buscarPorFiltro(@Path("latitude") Double latitude,@Path("longitude") Double longitude,@Path("raio") Double raio,@Path("preco") Double preco,@Path("inicio") Time inicio,@Path("fim") Time fim,@Path("ordenacao") Integer ordenacao,@Body Localizacao localizacao);
+    Call<List<Estudio>> buscarPorFiltro(@Path("latitude") Double latitude,@Path("longitude") Double longitude,@Path("raio") Double raio,@Path("preco") Double preco,@Path("inicio") String inicio,@Path("fim") String fim,@Path("ordenacao") Integer ordenacao,@Body Localizacao localizacao);
 }
