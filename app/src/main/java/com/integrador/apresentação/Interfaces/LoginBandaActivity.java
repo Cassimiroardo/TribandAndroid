@@ -101,7 +101,9 @@ public class LoginBandaActivity extends AppCompatActivity implements Validator.V
             @Override
             public void onFailure(Call<Banda> call, Throwable t) {
                 Toast.makeText(LoginBandaActivity.this, "Problemas com a conexão!!!", Toast.LENGTH_SHORT).show();
-                Log.d(TAG, "onFailure: "+t.getMessage());
+             //   Log.d(TAG, "onFailure: "+t.getMessage());
+                Toast.makeText(LoginBandaActivity.this, t.getMessage(), Toast.LENGTH_SHORT).show();
+
             }
         });
 

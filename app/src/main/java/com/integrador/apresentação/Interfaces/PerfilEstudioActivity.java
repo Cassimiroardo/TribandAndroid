@@ -9,13 +9,13 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.PopupMenu;
+import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
-import com.integrador.apresentação.Fragments.MapsFragment;
 import com.integrador.apresetação.R;
+import com.integrador.model.classes.Estudio;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
@@ -27,23 +27,39 @@ public class PerfilEstudioActivity extends AppCompatActivity implements PopupMen
     private Button btPesquisa;
     private Button btChat;
     private FragmentTransaction transaction;
-    private FragmentManager fragmentManager;
     private Button btConfiguracao;
 
+    private TextView tvTelefone;
+    private TextView tvEmail;
+    private TextView tvPreco;
+    private TextView tvDescricao;
+
+    private Estudio estudio;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_perfil_estudio);
         inicializa();
+        construindoPerfil();
+    }
+
+    private void construindoPerfil(){
+        Intent i = getIntent();
+        this.estudio = (Estudio) i.getSerializableExtra("estudio");
+        this.tvTelefone.setText("("+estudio.getTelefone().substring(0,2)+") "+estudio.getTelefone().substring(2,4)+" "+estudio.getTelefone().substring(4,8)+"-"+estudio.getTelefone().substring(8,estudio.getTelefone().length()));
+        this.tvPreco.setText("R$ "+estudio.getPreco()+" por hora");
+        this.tvDescricao.setText(estudio.getDescricao());
+        this.tvEmail.setText(estudio.getEmail());
     }
 
     private void inicializa(){
+        this.tvEmail = findViewById(R.id.tv_email);
+        this.tvDescricao = findViewById(R.id.tv_descricao);
+        this.tvPreco = findViewById(R.id.tv_preco);
+        this.tvTelefone = findViewById(R.id.tv_telefone);
+
         this.bt_configuracao= findViewById(R.id.bt_configuracao);
-       // this.fragmentManager = getSupportFragmentManager();
-        this.transaction = fragmentManager.beginTransaction();
-        this.transaction.add(R.id.container,new MapsFragment(),"mapsFragment");
-        transaction.commitAllowingStateLoss();
         this.btAgenda = findViewById(R.id.bt_agenda);
         this.btPesquisa = findViewById(R.id.bt_pesquisa);
         this.btChat = findViewById(R.id.bt_chat);

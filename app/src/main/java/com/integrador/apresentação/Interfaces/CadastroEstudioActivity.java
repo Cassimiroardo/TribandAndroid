@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.integrador.apresetação.R;
@@ -22,6 +23,10 @@ import com.mobsandgeeks.saripaar.annotation.NotEmpty;
 import com.mobsandgeeks.saripaar.annotation.Password;
 
 import java.util.List;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class CadastroEstudioActivity extends AppCompatActivity implements Validator.ValidationListener{
 
@@ -134,20 +139,44 @@ public class CadastroEstudioActivity extends AppCompatActivity implements Valida
         l.setEstado(etEstado.getText().toString().toUpperCase());
 
         this.estudio.setLocalizacao(l);
-//        this.estudio
-//        this.estudio
-//        this.estudio
-//        this.estudio
-//        this.estudio
+        this.estudio.setNome(etNome.getText().toString());
+        this.estudio.setSenha(etSenha.getText().toString());
+        this.estudio.setEmail(etEmail.getText().toString());
+        this.estudio.setTelefone(etTelefone.getText().toString());
 
+        this.estudioService.adicionar(estudio).enqueue(new Callback<Estudio>() {
+            @Override
+            public void onResponse(Call<Estudio> call, Response<Estudio> response) {
 
+                if(response.isSuccessful()){
+                    Toast.makeText(CadastroEstudioActivity.this, "Banda Cadastrada com sucesso!!", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(CadastroEstudioActivity.this,PerfilEstudioActivity.class);
+                    intent.putExtra("estudio",estudio);
+                    startActivity(intent);
+                }else{
+                    Toast.makeText(CadastroEstudioActivity.this, "Falha no cadastro, tente novamente mais tarde!", Toast.LENGTH_SHORT).show();
+                }
 
+            }
 
+            @Override
+            public void onFailure(Call<Estudio> call, Throwable t) {
+
+                Toast.makeText(CadastroEstudioActivity.this, "Falha na conexão cupinxa!!", Toast.LENGTH_SHORT).show();
+
+            }
+        });
 
     }
 
     @Override
     public void onValidationFailed(List<ValidationError> errors) {
-
+        for (ValidationError erro : errors) {
+            View componente = erro.getView();
+            String msg = erro.getCollatedErrorMessage(this);
+            if (componente instanceof EditText || componente instanceof CheckBox) {
+                ((TextView) componente).setError(msg);
+            }
+        }
     }
 }

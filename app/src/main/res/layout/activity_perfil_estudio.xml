@@ -231,6 +231,8 @@
 
 
                 <TextView
+                    android:id="@+id/tv_descricao"
+
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
@@ -242,104 +244,6 @@
                     />
 
             </LinearLayout>
-
-            <RelativeLayout
-                android:layout_marginTop="25dp"
-                android:layout_marginRight="25dp"
-                android:layout_marginLeft="25dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/button_bg"
-                >
-
-                <TextView
-                    android:id="@+id/fotos"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/colorAccent"
-                    android:textStyle="bold"
-                    android:textSize="20dp"
-                    android:text="FOTOS"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginLeft="30dp"
-                    android:layout_marginBottom="5dp"
-                    />
-
-                <ImageView
-                    android:id="@+id/iv_1"
-                    android:layout_below="@+id/fotos"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    tools:src="@tools:sample/avatars"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginBottom="5dp"
-                    />
-
-                <ImageView
-                    android:id="@+id/iv_2"
-                    android:layout_marginLeft="20dp"
-                    android:layout_below="@+id/iv_1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    tools:src="@tools:sample/avatars"
-                    android:layout_marginBottom="20dp"
-                    />
-
-                <ImageView
-                    android:id="@+id/iv_3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_toRightOf="@+id/iv_1"
-                    tools:src="@tools:sample/avatars"
-                    android:layout_below="@+id/fotos"
-                    android:layout_marginLeft="60dp"
-                    android:layout_marginBottom="5dp"
-                    />
-
-                <ImageView
-                    android:id="@+id/iv_4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_toRightOf="@+id/iv_2"
-                    tools:src="@tools:sample/avatars"
-                    android:layout_below="@+id/iv_3"
-                    android:layout_marginLeft="60dp"
-                    />
-            </RelativeLayout>
-
-            <LinearLayout
-                android:layout_marginTop="25dp"
-                android:layout_marginRight="25dp"
-                android:layout_marginLeft="25dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:background="@drawable/button_bg"
-                android:layout_marginBottom="10dp"
-                >
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/colorAccent"
-                    android:textStyle="bold"
-                    android:textSize="20dp"
-                    android:text="LOCALIZAÇÃO"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginLeft="30dp"
-                    android:layout_marginBottom="5dp"
-                    />
-
-                <FrameLayout
-                    android:id="@+id/container"
-                    android:layout_width="match_parent"
-                    android:layout_height="400dp"
-                    android:layout_marginRight="15dp"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginBottom="30dp"
-                    />
-
-            </LinearLayout>
-
 
 
         </LinearLayout>
