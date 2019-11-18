@@ -2,7 +2,7 @@ package com.integrador.model;
 
 import java.io.Serializable;
 
-class SubServico implements Serializable {
+public class SubServico implements Serializable {
 
     private String descricao;
     private Long idSubservico;
