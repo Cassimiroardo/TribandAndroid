@@ -1,6 +1,7 @@
 package com.integrador.services;
 
 import com.integrador.model.classes.Chat;
+import com.integrador.model.classes.Mensagem;
 
 import java.util.List;
 
@@ -15,20 +16,20 @@ import retrofit2.http.Path;
 public interface MensagemService {
 
     @POST("mensagem/")
-    Call<MensagemService> adicionar(@Body MensagemService p);
+    Call<Mensagem> adicionar(@Body Mensagem p);
 
     @GET("mensagem/")
-    Call<List<MensagemService>> listar();
+    Call<List<Mensagem>> listar();
 
     @GET("mensagem/id/{id}")
-    Call<MensagemService> buscarPorId(@Path("id") Long id);
+    Call<Mensagem> buscarPorId(@Path("id") Long id);
 
     @DELETE("mensagem/id/{id}")
     Call<Void> deletar(@Path("id") Long id);
 
     @PUT("mensagem/")
-    Call<MensagemService> atualizar(@Body MensagemService p);
+    Call<Mensagem> atualizar(@Body Mensagem p);
 
     @GET("mensagem/chat")
-    Call<List<MensagemService>> buscarPorChat(@Body Chat chat);
+    Call<List<Mensagem>> buscarPorChat(@Body Chat chat);
 }
