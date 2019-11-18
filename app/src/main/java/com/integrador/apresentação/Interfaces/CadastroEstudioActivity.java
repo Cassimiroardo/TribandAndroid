@@ -10,24 +10,68 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.integrador.apresetação.R;
+import com.integrador.model.classes.Estudio;
+import com.integrador.model.classes.Localizacao;
+import com.integrador.services.EstudioService;
+import com.mobsandgeeks.saripaar.ValidationError;
+import com.mobsandgeeks.saripaar.Validator;
+import com.mobsandgeeks.saripaar.annotation.Checked;
+import com.mobsandgeeks.saripaar.annotation.ConfirmPassword;
+import com.mobsandgeeks.saripaar.annotation.Email;
+import com.mobsandgeeks.saripaar.annotation.NotEmpty;
+import com.mobsandgeeks.saripaar.annotation.Password;
 
-public class CadastroEstudioActivity extends AppCompatActivity {
+import java.util.List;
 
+public class CadastroEstudioActivity extends AppCompatActivity implements Validator.ValidationListener{
+
+    @NotEmpty(message = "Nome Obrigatório")
     private EditText etNome;
+
+    @Email(message = "Email Obrigatório")
     private EditText etEmail;
+
+    @Password(message = "Senha Obrigatória")
     private EditText etSenha;
+
+    @ConfirmPassword
     private EditText etConfSenha;
+
+    @NotEmpty(message = "Rua Obrigatória")
     private EditText etRua;
+
+    @NotEmpty(message = "Numero da rua Obrigatório")
     private EditText etNumRua;
+
+    @NotEmpty(message = "Telefone Obrigatório")
     private EditText etTelefone;
+
+    @NotEmpty(message = "Cep Obrigatório")
     private EditText etCep;
+
+    @NotEmpty(message = "Estado Obrigatório")
     private EditText etEstado;
+
+    @NotEmpty(message = "Cidade Obrigatória")
     private EditText etCidade;
+
+    @NotEmpty(message = "Bairro Obrigatório")
     private EditText etBairro;
+
+    @NotEmpty(message = "Preco Obrigatório")
     private EditText etPreco;
+
+    @NotEmpty(message = "Cnpj Obrigatório")
     private EditText etCnpj;
+
+    @Checked(message = "Aceite os termos")
     private CheckBox cbTermos;
+
     private Button btCadastrar;
+
+    private Estudio estudio;
+    private EstudioService estudioService;
+    private Validator validator;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -75,4 +119,35 @@ public class CadastroEstudioActivity extends AppCompatActivity {
     }
 
 
+    @Override
+    public void onValidationSucceeded() {
+
+        this.estudio.setPreco(Double.parseDouble(etPreco.getText().toString()));
+        this.estudio.setCnpj(etCnpj.getText().toString());
+        this.estudio.setDescricao("insira a descrição na aba de editar perfil");
+
+        Localizacao l = new Localizacao();
+        l.setBairro(etBairro.getText().toString());
+        l.setCep(Long.parseLong(etCep.getText().toString()));
+        l.setCidade(etCidade.getText().toString());
+        l.setNumero(Integer.parseInt(etNumRua.getText().toString()));
+        l.setEstado(etEstado.getText().toString().toUpperCase());
+
+        this.estudio.setLocalizacao();
+//        this.estudio
+//        this.estudio
+//        this.estudio
+//        this.estudio
+//        this.estudio
+
+
+
+
+
+    }
+
+    @Override
+    public void onValidationFailed(List<ValidationError> errors) {
+
+    }
 }

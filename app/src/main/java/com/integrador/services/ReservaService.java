@@ -1,7 +1,7 @@
 package com.integrador.services;
 
 import com.integrador.model.Banda;
-import com.integrador.model.Estudio;
+import com.integrador.model.classes.Estudio;
 
 import java.util.List;
 

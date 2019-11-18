@@ -5,6 +5,7 @@ import android.app.TimePickerDialog;
 import android.content.pm.PackageManager;
 import android.location.Location;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -17,15 +18,18 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.fragment.app.DialogFragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.integrador.apresentação.Adapters.RecyclerViewAdapter;
 import com.integrador.apresentação.Fragments.TimePickerFragment;
 import com.integrador.apresetação.R;
-import com.integrador.model.Estudio;
-import com.integrador.model.Localizacao;
+import com.integrador.model.classes.Estudio;
+import com.integrador.model.classes.Localizacao;
 import com.integrador.services.EstudioService;
 import com.integrador.services.RetrofitUtils;
 
@@ -34,12 +38,22 @@ import java.util.ArrayList;
 
 public class PesquisarActivity extends AppCompatActivity implements TimePickerDialog.OnTimeSetListener {
 
+    private static final String TAG = "PesquisarActivity";
+
     private EditText etBarato;
     private CheckBox cbPerto;
     private EditText etPesquisar;
     private Button btPesquisar;
     private TextView tvFim;
     private TextView tvInicio;
+    private RecyclerView recyclerView;
+
+    private ArrayList<Long> ids = new ArrayList<>();;
+    private ArrayList<String> imagens = new ArrayList<>();
+    private ArrayList<Double> precos = new ArrayList<>();
+    private ArrayList<String> nomes = new ArrayList<>();
+    private ArrayList<String> localizacoes = new ArrayList<>();
+
     private DialogFragment timePicker = new TimePickerFragment();
     private FusedLocationProviderClient client;
 
@@ -51,13 +65,14 @@ public class PesquisarActivity extends AppCompatActivity implements TimePickerDi
 
     private Double latitude;
     private Double longitude;
-    private Float raio;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pesquisar);
         inicializa();
+
+        busca();
     }
 
     private void inicializa() {
@@ -101,7 +116,6 @@ public class PesquisarActivity extends AppCompatActivity implements TimePickerDi
                 boolean fi = !tvFim.getText().toString().equalsIgnoreCase("hora fim");
 
 
-
                 if (cbPerto.isChecked() && in && fi) {
                     // pesquisa por todos
 
@@ -116,7 +130,6 @@ public class PesquisarActivity extends AppCompatActivity implements TimePickerDi
                                 if(location != null){
                                     latitude = location.getLatitude();
                                     longitude = location.getLongitude();
-                                    raio = location.getAccuracy();
                                 }else{
                                     Toast.makeText(PesquisarActivity.this, "Localização null!!", Toast.LENGTH_SHORT).show();
                                 }
@@ -124,16 +137,47 @@ public class PesquisarActivity extends AppCompatActivity implements TimePickerDi
                             }).addOnFailureListener(new OnFailureListener() {
                         @Override
                         public void onFailure(@NonNull Exception e) {
-
+                            Log.d(TAG, "onFailure: "+e.getMessage());
                         }
                     });
-
-               // estudios = estudioService.buscarPorFiltro(latitude,longitude,raio,);
-
+                }else{
+                    latitude = null;
+                    longitude = null;
                 }
+                    //this.estudios = estudioService.buscarPorFiltro(latitude,longitude,null,Double.parseDouble(etBarato.getText().toString()),tvInicio.getText().toString(),tvFim.getText().toString(),null,null);
             }
         });
+
+            initCampos();
+
     }
+
+    int i = 0;
+
+    private void initCampos(){
+        for(Estudio e: estudios){
+
+            this.ids.add(e.getId());
+            // imagens
+            this.precos.add(e.getPreco());
+            this.nomes.add(e.getNome());
+            this.localizacoes.add(e.getLocalizacao().getEstado());
+
+        }
+
+        initRecyclerView();
+    }
+
+
+    private void initRecyclerView(){
+        Log.d(TAG, "initRecyclerView: inicio");
+        this.recyclerView = findViewById(R.id.recyclerview);
+        RecyclerViewAdapter recyclerViewAdapter = new RecyclerViewAdapter(this,this.ids,this.precos,this.nomes,this.localizacoes);
+        this.recyclerView.setAdapter(recyclerViewAdapter);
+        this.recyclerView.setLayoutManager(new LinearLayoutManager(this));
+    }
+
+
 
 
 }

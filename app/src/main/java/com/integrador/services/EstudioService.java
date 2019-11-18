@@ -1,6 +1,6 @@
 package com.integrador.services;
 
-import com.integrador.model.Estudio;
+import com.integrador.model.classes.Estudio;
 import com.integrador.model.Localizacao;
 
 import java.sql.Time;

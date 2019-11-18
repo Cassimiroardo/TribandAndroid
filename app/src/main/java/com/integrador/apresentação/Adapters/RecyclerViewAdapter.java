@@ -14,12 +14,8 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 
-import com.bumptech.glide.Glide;
 import com.integrador.apresentação.Interfaces.PerfilEstudioActivity;
-import com.integrador.apresentação.Interfaces.PesquisarActivity;
 import com.integrador.apresetação.R;
-import com.integrador.model.Estudio;
-import com.integrador.services.EstudioService;
 
 import java.util.ArrayList;
 
@@ -32,14 +28,14 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     private ArrayList<Long> ids = new ArrayList<>();
     private ArrayList<String> imagens = new ArrayList<>();
-    private ArrayList<String> precos = new ArrayList<>();
+    private ArrayList<Double> precos = new ArrayList<>();
     private ArrayList<String> nomes = new ArrayList<>();
     private ArrayList<String> localizacoes = new ArrayList<>();
     private Context context;
 
-    public RecyclerViewAdapter(Context context, ArrayList<Long> ids, ArrayList<String> imagens, ArrayList<String> precos, ArrayList<String> nomes, ArrayList<String> localizacoes) {
+    public RecyclerViewAdapter(Context context, ArrayList<Long> ids, ArrayList<Double> precos, ArrayList<String> nomes, ArrayList<String> localizacoes) {
         this.ids = ids;
-        this.imagens = imagens;
+        // this.imagens = imagens;
         this.precos = precos;
         this.nomes = nomes;
         this.localizacoes = localizacoes;
@@ -60,11 +56,11 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         Log.d(TAG, "onBindViewHolder: called");
 
         //colocar as imagens ?????
-
-        Glide.with(context)
-                .asBitmap()
-                .load(imagens.get(position))
-                .into(holder.imagem);
+//
+//        Glide.with(context)
+//                .asBitmap()
+//                .load(imagens.get(position))
+//                .into(holder.imagem);
 
         holder.nome.setText(nomes.get(position));
         holder.preco.setText("R$ " + precos.get(position));
@@ -76,6 +72,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                 Intent intent = new Intent(context, PerfilEstudioActivity.class);
                 intent.putExtra("estudioId", ids.get(position));
                 context.startActivity(intent);
+
             }
         });
     }

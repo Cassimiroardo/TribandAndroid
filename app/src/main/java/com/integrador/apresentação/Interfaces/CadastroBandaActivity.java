@@ -13,7 +13,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.integrador.apresetação.R;
-import com.integrador.model.Banda;
+import com.integrador.model.classes.Banda;
 import com.integrador.services.BandaService;
 import com.integrador.services.RetrofitUtils;
 import com.mobsandgeeks.saripaar.ValidationError;
