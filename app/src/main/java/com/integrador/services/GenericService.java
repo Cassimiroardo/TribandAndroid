@@ -12,6 +12,7 @@ import retrofit2.http.Path;
 
 public interface GenericService<P> {
 
+
     @POST("")
     Call<P> adicionar(@Body P p);
 
@@ -26,6 +27,5 @@ public interface GenericService<P> {
 
     @PUT("")
     Call<P> atualizar(@Body P p);
-
 
 }

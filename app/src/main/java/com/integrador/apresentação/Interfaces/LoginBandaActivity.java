@@ -5,9 +5,11 @@ import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.integrador.apresetação.R;
 import com.integrador.model.Banda;
@@ -20,7 +22,13 @@ import com.mobsandgeeks.saripaar.annotation.Password;
 
 import java.util.List;
 
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+
 public class LoginBandaActivity extends AppCompatActivity implements Validator.ValidationListener {
+
+    private static final String TAG = "LoginBandaActivity";
 
     @Email(message = "Email Obrigatório")
     private EditText etEmail;
@@ -78,10 +86,27 @@ public class LoginBandaActivity extends AppCompatActivity implements Validator.V
         Intent intent = new Intent(this, PerfilBandaActivity.class);
 
 
-        banda = (Banda) bandaService.buscarPorEmailEsenha(etEmail.getText().toString(), etSenha.getText().toString());
+        Call<Banda> call = bandaService.buscarPorEmailEsenha(etEmail.getText().toString(), etSenha.getText().toString());
+
+        call.enqueue(new Callback<Banda>() {
+            @Override
+            public void onResponse(Call<Banda> call, Response<Banda> response) {
+                if (response.isSuccessful()) {
+                    banda = response.body();
+                } else {
+                    Toast.makeText(LoginBandaActivity.this, "Login Invalido!!!", Toast.LENGTH_SHORT).show();
+                }
+            }
+
+            @Override
+            public void onFailure(Call<Banda> call, Throwable t) {
+                Toast.makeText(LoginBandaActivity.this, "Problemas com a conexão!!!", Toast.LENGTH_SHORT).show();
+                Log.d(TAG, "onFailure: "+t.getMessage());
+            }
+        });
 
         intent.putExtra("banda", this.banda);
-        startActivity(intent);
+       // startActivity(intent);
     }
 
     @Override
