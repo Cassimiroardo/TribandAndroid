@@ -133,7 +133,7 @@ public class CadastroEstudioActivity extends AppCompatActivity implements Valida
         l.setNumero(Integer.parseInt(etNumRua.getText().toString()));
         l.setEstado(etEstado.getText().toString().toUpperCase());
 
-        this.estudio.setLocalizacao();
+        this.estudio.setLocalizacao(l);
 //        this.estudio
 //        this.estudio
 //        this.estudio

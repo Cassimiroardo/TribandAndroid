@@ -1,7 +1,7 @@
 package com.integrador.services;
 
-import com.integrador.model.Servico;
-import com.integrador.model.SubServico;
+import com.integrador.model.classes.Servico;
+import com.integrador.model.classes.SubServico;
 
 
 import java.util.List;

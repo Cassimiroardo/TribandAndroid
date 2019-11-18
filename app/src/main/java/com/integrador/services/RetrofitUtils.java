@@ -9,7 +9,7 @@ public class RetrofitUtils {
     // para melhorar a manutenibilidade do código criei essa classe RetrofitUtils
     // e reaproveitamos esse trecho em todas as activities;
     public static final Retrofit retrofit = new Retrofit.Builder()
-            .baseUrl("http://192.168.101.6:8080/")
+            .baseUrl("http://192.168.101.15:8080/")
             .addConverterFactory(GsonConverterFactory.create())
             .build();
 }

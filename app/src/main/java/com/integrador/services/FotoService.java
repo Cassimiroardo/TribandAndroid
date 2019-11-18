@@ -1,6 +1,6 @@
 package com.integrador.services;
 
-import com.integrador.model.Foto;
+import com.integrador.model.classes.Foto;
 
 import retrofit2.Call;
 import retrofit2.http.Multipart;

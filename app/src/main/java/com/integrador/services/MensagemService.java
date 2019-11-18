@@ -1,5 +1,7 @@
 package com.integrador.services;
 
+import com.integrador.model.classes.Chat;
+
 import java.util.List;
 
 import retrofit2.Call;

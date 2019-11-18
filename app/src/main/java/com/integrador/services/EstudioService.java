@@ -1,7 +1,7 @@
 package com.integrador.services;
 
 import com.integrador.model.classes.Estudio;
-import com.integrador.model.Localizacao;
+import com.integrador.model.classes.Localizacao;
 
 import java.sql.Time;
 import java.util.List;
