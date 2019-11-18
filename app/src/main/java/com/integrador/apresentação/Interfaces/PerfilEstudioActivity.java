@@ -80,6 +80,7 @@ public class PerfilEstudioActivity extends AppCompatActivity implements PopupMen
         switch (item.getItemId()){
             case R.id.editar:
                 Intent intent = new Intent(PerfilEstudioActivity.this,EditarEstudioActivity.class);
+                intent.putExtra("estudio",this.estudio);
                 startActivity(intent);
                 return true;
             case R.id.sair:
