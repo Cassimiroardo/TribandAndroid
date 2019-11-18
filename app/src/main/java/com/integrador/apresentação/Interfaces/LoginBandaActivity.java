@@ -83,16 +83,20 @@ public class LoginBandaActivity extends AppCompatActivity implements Validator.V
     @Override
     public void onValidationSucceeded() {
 
-        Intent intent = new Intent(this, PerfilBandaActivity.class);
 
 
-        Call<Banda> call = bandaService.buscarPorEmailEsenha(etEmail.getText().toString(), etSenha.getText().toString());
-
-        call.enqueue(new Callback<Banda>() {
+        bandaService.buscarPorEmailEsenha(etEmail.getText().toString(), etSenha.getText().toString()).enqueue(new Callback<Banda>() {
             @Override
             public void onResponse(Call<Banda> call, Response<Banda> response) {
+
                 if (response.isSuccessful()) {
                     banda = response.body();
+                    Intent intent = new Intent(LoginBandaActivity.this, PerfilBandaActivity.class);
+
+
+                    intent.putExtra("banda", banda);
+
+                    startActivity(intent);
                 } else {
                     Toast.makeText(LoginBandaActivity.this, "Login Invalido!!!", Toast.LENGTH_SHORT).show();
                 }
@@ -100,15 +104,12 @@ public class LoginBandaActivity extends AppCompatActivity implements Validator.V
 
             @Override
             public void onFailure(Call<Banda> call, Throwable t) {
-                Toast.makeText(LoginBandaActivity.this, "Problemas com a conexão!!!", Toast.LENGTH_SHORT).show();
-             //   Log.d(TAG, "onFailure: "+t.getMessage());
-                Toast.makeText(LoginBandaActivity.this, t.getMessage(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(LoginBandaActivity.this, "Login invalido", Toast.LENGTH_SHORT).show();
 
             }
         });
 
-        intent.putExtra("banda", this.banda);
-       // startActivity(intent);
+
     }
 
     @Override

@@ -1,5 +1,6 @@
 package com.integrador.services;
 
+import com.integrador.model.classes.AvaliacaoBanda;
 import com.integrador.model.classes.Banda;
 
 import java.util.List;
@@ -14,22 +15,22 @@ import retrofit2.http.Path;
 
 public interface AvaliacaoBandaService {
     @POST("avaliacaoBanda/")
-    Call<AvaliacaoBandaService> adicionar(@Body AvaliacaoBandaService p);
+    Call<AvaliacaoBanda> adicionar(@Body AvaliacaoBanda p);
 
     @GET("avaliacaoBanda/")
-    Call<List<AvaliacaoBandaService>> listar();
+    Call<List<AvaliacaoBanda>> listar();
 
     @GET("avaliacaoBanda/id/{id}")
-    Call<AvaliacaoBandaService> buscarPorId(@Path("id") Long id);
+    Call<AvaliacaoBanda> buscarPorId(@Path("id") Long id);
 
     @DELETE("avaliacaoBanda/id/{id}")
     Call<Void> deletar(@Path("id") Long id);
 
     @PUT("avaliacaoBanda/")
-    Call<AvaliacaoBandaService> atualizar(@Body AvaliacaoBandaService p);
+    Call<AvaliacaoBanda> atualizar(@Body AvaliacaoBanda p);
 
 
     @GET("avaliacaoBanda/buscaPorBanda")
-    Call<List<AvaliacaoBandaService>> buscarPorBanda(@Body Banda banda);
+    Call<List<AvaliacaoBanda>> buscarPorBanda(@Body Banda banda);
 
 }

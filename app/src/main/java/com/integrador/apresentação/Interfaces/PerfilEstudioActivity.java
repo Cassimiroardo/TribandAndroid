@@ -46,8 +46,10 @@ public class PerfilEstudioActivity extends AppCompatActivity implements PopupMen
 
     private void construindoPerfil(){
         Intent i = getIntent();
+
         this.estudio = (Estudio) i.getSerializableExtra("estudio");
-        this.tvTelefone.setText("("+estudio.getTelefone().substring(0,2)+") "+estudio.getTelefone().substring(2,4)+" "+estudio.getTelefone().substring(4,8)+"-"+estudio.getTelefone().substring(8,estudio.getTelefone().length()));
+        String telefone ="("+estudio.getTelefone().substring(0,2)+") "+estudio.getTelefone().substring(2,4)+" "+estudio.getTelefone().substring(4,8)+"-"+estudio.getTelefone().substring(8,estudio.getTelefone().length());
+        this.tvTelefone.setText(telefone);
         this.tvPreco.setText("R$ "+estudio.getPreco()+" por hora");
         this.tvDescricao.setText(estudio.getDescricao());
         this.tvEmail.setText(estudio.getEmail());
