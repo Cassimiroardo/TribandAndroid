@@ -93,6 +93,7 @@ public class CadastroBandaActivity extends AppCompatActivity implements Validato
     public void onValidationSucceeded() {
 
         this.banda.setNome(etNome.getText().toString());
+        this.banda.setEmail(etEmail.getText().toString());
         this.banda.setSenha(etSenha.getText().toString());
         this.banda.setIntegrantes(Integer.parseInt(etIntegrantes.getText().toString()));
 
