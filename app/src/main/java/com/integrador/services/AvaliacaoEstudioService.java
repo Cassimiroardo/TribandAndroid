@@ -12,22 +12,22 @@ import retrofit2.http.POST;
 import retrofit2.http.PUT;
 import retrofit2.http.Path;
 
-public interface AvaliacaoEstudio {
+public interface AvaliacaoEstudioService {
     @POST("avaliacaoEstudio/")
-    Call<AvaliacaoEstudio> adicionar(@Body AvaliacaoEstudio p);
+    Call<AvaliacaoEstudioService> adicionar(@Body AvaliacaoEstudioService p);
 
     @GET("avaliacaoEstudio/")
-    Call<List<AvaliacaoEstudio>> listar();
+    Call<List<AvaliacaoEstudioService>> listar();
 
     @GET("avaliacaoEstudio/id/{id}")
-    Call<AvaliacaoEstudio> buscarPorId(@Path("id") Long id);
+    Call<AvaliacaoEstudioService> buscarPorId(@Path("id") Long id);
 
     @DELETE("avaliacaoEstudio/id/{id}")
     Call<Void> deletar(@Path("id") Long id);
 
     @PUT("avaliacaoEstudio/")
-    Call<AvaliacaoEstudio> atualizar(@Body AvaliacaoEstudio p);
+    Call<AvaliacaoEstudioService> atualizar(@Body AvaliacaoEstudioService p);
 
     @GET("avaliacaoEstudio/buscaPorEstudio")
-    Call<List<AvaliacaoEstudio>> buscaPorEstudio(@Body Estudio estudio);
+    Call<List<AvaliacaoEstudioService>> buscaPorEstudio(@Body Estudio estudio);
 }

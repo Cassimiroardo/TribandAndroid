@@ -12,24 +12,24 @@ import retrofit2.http.POST;
 import retrofit2.http.PUT;
 import retrofit2.http.Path;
 
-public interface AvaliacaoBanda {
+public interface AvaliacaoBandaService {
     @POST("avaliacaoBanda/")
-    Call<AvaliacaoBanda> adicionar(@Body AvaliacaoBanda p);
+    Call<AvaliacaoBandaService> adicionar(@Body AvaliacaoBandaService p);
 
     @GET("avaliacaoBanda/")
-    Call<List<AvaliacaoBanda>> listar();
+    Call<List<AvaliacaoBandaService>> listar();
 
     @GET("avaliacaoBanda/id/{id}")
-    Call<AvaliacaoBanda> buscarPorId(@Path("id") Long id);
+    Call<AvaliacaoBandaService> buscarPorId(@Path("id") Long id);
 
     @DELETE("avaliacaoBanda/id/{id}")
     Call<Void> deletar(@Path("id") Long id);
 
     @PUT("avaliacaoBanda/")
-    Call<AvaliacaoBanda> atualizar(@Body AvaliacaoBanda p);
+    Call<AvaliacaoBandaService> atualizar(@Body AvaliacaoBandaService p);
 
 
     @GET("avaliacaoBanda/buscaPorBanda")
-    Call<List<AvaliacaoBanda>> buscarPorBanda(@Body Banda banda);
+    Call<List<AvaliacaoBandaService>> buscarPorBanda(@Body Banda banda);
 
 }
