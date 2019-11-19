@@ -136,6 +136,8 @@
                 android:layout_margin="10dp"
                 android:textColor="@color/colorAccent"
 
+                android:inputType="number"
+
                 android:background="@drawable/edittext_bg"
                 />
 
@@ -151,6 +153,8 @@
                 android:textColorHint="@color/hintColor"
                 android:textAlignment="center"
                 android:textColor="@color/colorAccent"
+
+                android:inputType="number"
 
                 android:background="@drawable/edittext_bg"
                 />
@@ -178,6 +182,8 @@
             android:layout_weight="1"
             android:layout_margin="10dp"
             android:textColor="@color/colorAccent"
+
+            android:inputType="number"
 
             android:background="@drawable/edittext_bg"
             />
@@ -252,6 +258,8 @@
                 android:textColor="@color/colorAccent"
 
                 android:background="@drawable/edittext_bg"
+
+                android:inputType="numberDecimal"
                 />
 
         </LinearLayout>
