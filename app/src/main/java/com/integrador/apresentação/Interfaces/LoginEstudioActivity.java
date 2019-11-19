@@ -79,10 +79,6 @@ public class LoginEstudioActivity extends AppCompatActivity implements Validator
 
     @Override
     public void onValidationSucceeded() {
-        this.btLogar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
 
                 Call<Estudio> call = estudioService.buscarPorEmailEsenha(etEmail.getText().toString(),etSenha.getText().toString());
 
@@ -109,8 +105,6 @@ public class LoginEstudioActivity extends AppCompatActivity implements Validator
                     }
                 });
 
-            }
-        });
     }
 
     @Override
