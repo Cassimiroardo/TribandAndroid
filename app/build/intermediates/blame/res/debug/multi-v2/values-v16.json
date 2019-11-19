@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/erik/Desktop/Integrador/TribandAndroid/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v16/values-v16.xml",
+            "outputFile": "/home/cassimiro/programação/projetos/TribandAndroid/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v16/values-v16.xml",
             "map": [
                 {
-                    "source": "/home/erik/.gradle/caches/transforms-1/files-1.1/core-1.0.0.aar/394851defa4546b91260d99b63c406af/res/values-v16/values-v16.xml",
+                    "source": "/home/cassimiro/.gradle/caches/transforms-1/files-1.1/core-1.0.0.aar/e1ab948148df7cb6eed92a24271c86ce/res/values-v16/values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "/home/erik/.gradle/caches/transforms-1/files-1.1/appcompat-1.0.0.aar/655c9175a4bde0b4a8e183cbde2aa794/res/values-v16/values-v16.xml",
+                    "source": "/home/cassimiro/.gradle/caches/transforms-1/files-1.1/appcompat-1.0.0.aar/14f5cff0ee12d4814eb2eee471183324/res/values-v16/values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

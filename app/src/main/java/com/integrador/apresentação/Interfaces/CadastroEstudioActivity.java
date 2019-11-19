@@ -2,7 +2,9 @@ package com.integrador.apresentação.Interfaces;
 
 import android.content.Intent;
 import android.os.Bundle;
+
 import androidx.appcompat.app.AppCompatActivity;
+
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -14,6 +16,8 @@ import com.integrador.apresetação.R;
 import com.integrador.model.classes.Estudio;
 import com.integrador.model.classes.Localizacao;
 import com.integrador.services.EstudioService;
+import com.integrador.services.LocalizacaoService;
+import com.integrador.services.RetrofitUtils;
 import com.mobsandgeeks.saripaar.ValidationError;
 import com.mobsandgeeks.saripaar.Validator;
 import com.mobsandgeeks.saripaar.annotation.Checked;
@@ -28,7 +32,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class CadastroEstudioActivity extends AppCompatActivity implements Validator.ValidationListener{
+public class CadastroEstudioActivity extends AppCompatActivity implements Validator.ValidationListener {
 
     @NotEmpty(message = "Nome Obrigatório")
     private EditText etNome;
@@ -76,7 +80,10 @@ public class CadastroEstudioActivity extends AppCompatActivity implements Valida
 
     private Estudio estudio;
     private EstudioService estudioService;
+    private Localizacao localizacao;
+    private LocalizacaoService localizacaoService;
     private Validator validator;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -89,7 +96,13 @@ public class CadastroEstudioActivity extends AppCompatActivity implements Valida
     }
 
 
-    private void inicializa(){
+    private void inicializa() {
+        this.validator = new Validator(this);
+        this.validator.setValidationListener(this);
+        this.estudio = new Estudio();
+        this.estudioService = RetrofitUtils.retrofit.create(EstudioService.class);
+        this.localizacaoService = RetrofitUtils.retrofit.create(LocalizacaoService.class);
+
         this.etNome = findViewById(R.id.et_nome);
         this.etEmail = findViewById(R.id.et_email);
         this.etSenha = findViewById(R.id.et_senha);
@@ -105,67 +118,61 @@ public class CadastroEstudioActivity extends AppCompatActivity implements Valida
         this.etCnpj = findViewById(R.id.et_cnpj);
         this.cbTermos = findViewById(R.id.cb_termos);
         this.btCadastrar = findViewById(R.id.bt_cadastrar);
+
     }
 
-    private void cadastro(){
+    private void cadastro() {
+        this.btCadastrar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
-        if(true) {
-
-            this.btCadastrar.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Intent intent = new Intent(CadastroEstudioActivity.this, PerfilEstudioActivity.class);
-                    startActivity(intent);
-                }
-            });
-        }else{
-            Toast.makeText(CadastroEstudioActivity.this,"Erro no cadastro", Toast.LENGTH_SHORT).show();
-        }
+                validator.validate();
+            }
+        });
     }
 
 
     @Override
     public void onValidationSucceeded() {
+        estudio.setEmail(etEmail.getText().toString());
+        estudio.setSenha(etSenha.getText().toString());
+        estudio.setTelefone(etTelefone.getText().toString());
+        estudio.setPreco(Double.parseDouble(etPreco.getText().toString()));
+        estudio.setCnpj(etCnpj.getText().toString());
+        estudio.setDescricao("insira a descrição na aba de editar perfil");
 
-        this.estudio.setPreco(Double.parseDouble(etPreco.getText().toString()));
-        this.estudio.setCnpj(etCnpj.getText().toString());
-        this.estudio.setDescricao("insira a descrição na aba de editar perfil");
+        localizacao = new Localizacao();
+        localizacao.setBairro(etBairro.getText().toString());
+        localizacao.setCep(Long.parseLong(etCep.getText().toString()));
+        localizacao.setCidade(etCidade.getText().toString());
+        localizacao.setRua(etRua.getText().toString());
+        localizacao.setNumero(Integer.parseInt(etNumRua.getText().toString()));
+        localizacao.setEstado(etEstado.getText().toString().toUpperCase());
 
-        Localizacao l = new Localizacao();
-        l.setBairro(etBairro.getText().toString());
-        l.setCep(Long.parseLong(etCep.getText().toString()));
-        l.setCidade(etCidade.getText().toString());
-        l.setNumero(Integer.parseInt(etNumRua.getText().toString()));
-        l.setEstado(etEstado.getText().toString().toUpperCase());
+        estudio.setLocalizacao(localizacao);
 
-        this.estudio.setLocalizacao(l);
-        this.estudio.setNome(etNome.getText().toString());
-        this.estudio.setSenha(etSenha.getText().toString());
-        this.estudio.setEmail(etEmail.getText().toString());
-        this.estudio.setTelefone(etTelefone.getText().toString());
 
-        this.estudioService.adicionar(estudio).enqueue(new Callback<Estudio>() {
+        estudioService.adicionar(estudio).enqueue(new Callback<Estudio>() {
             @Override
             public void onResponse(Call<Estudio> call, Response<Estudio> response) {
-
-                if(response.isSuccessful()){
-                    Toast.makeText(CadastroEstudioActivity.this, "Banda Cadastrada com sucesso!!", Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(CadastroEstudioActivity.this,PerfilEstudioActivity.class);
-                    intent.putExtra("estudio",estudio);
+                if (response.isSuccessful()) {
+                    Intent intent = new Intent(CadastroEstudioActivity.this, PerfilEstudioActivity.class);
+                    intent.putExtra("estudio", estudio);
+                    Toast.makeText(CadastroEstudioActivity.this, "Cadastro realizado com sucesso!!!", Toast.LENGTH_SHORT).show();
                     startActivity(intent);
-                }else{
-                    Toast.makeText(CadastroEstudioActivity.this, "Falha no cadastro, tente novamente mais tarde!", Toast.LENGTH_SHORT).show();
-                }
+                } else {
 
+                    Toast.makeText(CadastroEstudioActivity.this, "Cadastro deu erro!!!", Toast.LENGTH_SHORT).show();
+                }
             }
 
             @Override
             public void onFailure(Call<Estudio> call, Throwable t) {
 
-                Toast.makeText(CadastroEstudioActivity.this, "Falha na conexão cupinxa!!", Toast.LENGTH_SHORT).show();
-
+                Toast.makeText(CadastroEstudioActivity.this, "EROOOO!!!", Toast.LENGTH_SHORT).show();
             }
         });
+
 
     }
 

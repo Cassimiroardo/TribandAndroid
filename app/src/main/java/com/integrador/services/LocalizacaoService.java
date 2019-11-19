@@ -1,5 +1,7 @@
 package com.integrador.services;
 
+import com.integrador.model.classes.Localizacao;
+
 import java.util.List;
 
 import retrofit2.Call;
@@ -12,18 +14,18 @@ import retrofit2.http.Path;
 
 public interface LocalizacaoService {
     @POST("localizacao/")
-    Call<LocalizacaoService> adicionar(@Body LocalizacaoService p);
+    Call<Localizacao> adicionar(@Body Localizacao p);
 
     @GET("localizacao/")
-    Call<List<LocalizacaoService>> listar();
+    Call<List<Localizacao>> listar();
 
     @GET("localizacao/id/{id}")
-    Call<LocalizacaoService> buscarPorId(@Path("id") Long id);
+    Call<Localizacao> buscarPorId(@Path("id") Long id);
 
     @DELETE("localizacao/id/{id}")
     Call<Void> deletar(@Path("id") Long id);
 
     @PUT("localizacao/")
-    Call<LocalizacaoService> atualizar(@Body LocalizacaoService p);
+    Call<Localizacao> atualizar(@Body Localizacao p);
 
 }

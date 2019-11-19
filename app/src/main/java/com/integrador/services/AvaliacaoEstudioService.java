@@ -1,5 +1,6 @@
 package com.integrador.services;
 
+import com.integrador.model.classes.AvaliacaoEstudio;
 import com.integrador.model.classes.Estudio;
 
 import java.util.List;
@@ -14,20 +15,20 @@ import retrofit2.http.Path;
 
 public interface AvaliacaoEstudioService {
     @POST("avaliacaoEstudio/")
-    Call<AvaliacaoEstudioService> adicionar(@Body AvaliacaoEstudioService p);
+    Call<AvaliacaoEstudio> adicionar(@Body AvaliacaoEstudio p);
 
     @GET("avaliacaoEstudio/")
-    Call<List<AvaliacaoEstudioService>> listar();
+    Call<List<AvaliacaoEstudio>> listar();
 
     @GET("avaliacaoEstudio/id/{id}")
-    Call<AvaliacaoEstudioService> buscarPorId(@Path("id") Long id);
+    Call<AvaliacaoEstudio> buscarPorId(@Path("id") Long id);
 
     @DELETE("avaliacaoEstudio/id/{id}")
     Call<Void> deletar(@Path("id") Long id);
 
     @PUT("avaliacaoEstudio/")
-    Call<AvaliacaoEstudioService> atualizar(@Body AvaliacaoEstudioService p);
+    Call<AvaliacaoEstudio> atualizar(@Body AvaliacaoEstudio p);
 
     @GET("avaliacaoEstudio/buscaPorEstudio")
-    Call<List<AvaliacaoEstudioService>> buscaPorEstudio(@Body Estudio estudio);
+    Call<List<AvaliacaoEstudio>> buscaPorEstudio(@Body Estudio estudio);
 }
